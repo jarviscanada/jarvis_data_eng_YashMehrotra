@@ -1,0 +1,88 @@
+{
+  "education": [
+    {
+      "awards_achievements": [
+        "GPA: 84.97/100.00"
+      ],
+      "degree": "Diploma",
+      "department": "Artificial Intelligence with Machine Learning",
+      "duration": "2025",
+      "school_name": "Humber College"
+    },
+    {
+      "awards_achievements": null,
+      "degree": "Bachelor of Technology",
+      "department": "Computer Science \u0026 Engineering",
+      "duration": "2017-2021",
+      "school_name": "Jaypee University of Information Technology"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_YashMehrotra",
+  "highlighted_projects": [
+    {
+      "description": "Built an AI Assistant that utilizes RAG pipeline with custom code chunking, sentence transformer embeddings, vector indexing, and LLM inference to answers questions from custom large C++ codebases using strict citation rules.",
+      "git_url": "https://github.com/Yooshley/ue_rag_assistant",
+      "name": "Codebase RAG Assistant"
+    },
+    {
+      "description": "Built a modular Agentic System for analyzing data across multiple domains like finance, research and policy using a shared core architecture of planning, retrieval analysis and reporting agents.",
+      "git_url": "https://github.com/Yooshley/domain-intelligence-agent",
+      "name": "Domain Intelligence Agent"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": "Developed a Cluster Monitoring Agent that allows the linux administrator to track hardware information and resource usage across multiple nodes in a cluster using Bash scripting, PostgreSQL, Docker and Crontab to automatically gather usage statistics.",
+      "git_url": "/linux_sql",
+      "name": "Cluster Monitor"
+    }
+  ],
+  "name": "Yash Mehrotra",
+  "others": [
+    {
+      "bullets": [
+        "Reading scifi/fantasy",
+        "Developing videogame mods"
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis",
+      "description": "Developed production-grade infrastructure tooling and data pipeline solutions across Linux, PostgreSQL, and Docker environments using Bash scripting and Agile practices.",
+      "duration": "2026-present",
+      "title": "ML Engineer"
+    },
+    {
+      "company": "Hashbyte Studio",
+      "description": "Built and shipped multi-platform, multiplayer, commercial titles owning systems development, performance optimization, and platform support.",
+      "duration": "2021-2023",
+      "title": "Game Developer"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "RAG (Retrieval Augmented Generation)",
+      "MCP (Model Context Protocol)",
+      "Pytorch/Tensorflow/Scikit-learn",
+      "LLM APIs",
+      "Langchain"
+    ],
+    "familiar": [
+      "Spark",
+      "Docker",
+      "Sagemaker",
+      "Databricks",
+      "Hadoop"
+    ],
+    "proficient": [
+      "Python",
+      "Linux/Bash",
+      "RDBMS/SQL",
+      "Agile/Scrum",
+      "Git"
+    ]
+  },
+  "summary": "ML engineer with a diploma in Artificial Intelligence with Machine Learning (Humber College, 2025) and 4+ years of professional software engineering experience. Built LLM-powered applications, RAG pipelines, and agentic workflows by integrating LLM APIs, designing retrieval architectures, and building evaluation frameworks for generative AI outputs. Comfortable working across technical and non-technical teams, communicating AI concepts clearly, and delivering practical solutions to real problems."
+}
