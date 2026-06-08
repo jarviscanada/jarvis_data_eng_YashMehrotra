@@ -7,3 +7,7 @@ target/
 *.iml
 .idea/
 .eclipse
+python_data_analytics/.config/
+python_data_analytics/.jupyter/
+python_data_analytics/.local/
+python_data_analytics/.npm/
