@@ -20,7 +20,7 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_YashMehrotra",
   "highlighted_projects": [
     {
-      "description": "Built an AI Assistant that utilizes RAG pipeline with custom code chunking, sentence transformer embeddings, vector indexing, and LLM inference to answers questions from custom large C++ codebases using strict citation rules.",
+      "description": "Built an AI Assistant that utilizes RAG pipeline with custom code chunking, sentence transformer embeddings, vector indexing, and LLM inference to answer questions from custom large C++ codebases using strict citation rules.",
       "git_url": "https://github.com/Yooshley/ue_rag_assistant",
       "name": "Codebase RAG Assistant"
     },
@@ -32,17 +32,22 @@
   ],
   "jarvis_projects": [
     {
-      "description": "Developed a Cluster Monitoring Agent that allows the linux administrator to track hardware information and resource usage across multiple nodes in a cluster using Bash scripting, PostgreSQL, Docker and Crontab to automatically gather usage statistics.",
+      "description": "Developed a Cluster Monitoring Agent that allows the Linux administrator to track hardware information and resource usage across multiple nodes in a cluster using Bash scripting, PostgreSQL, Docker and Crontab to automatically gather usage statistics.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
+    },
+    {
+      "description": "Perform Exploratory Data Analysis on an Online Sales Dataset, drawing out insights that inform business decisions. Trained a Machine Learning model to predict and recommend restocking quantity for future months.",
+      "git_url": "/linux_sql",
+      "name": "Online Sales Dataset Analysis and Restock Recommendation System"
     }
   ],
   "name": "Yash Mehrotra",
   "others": [
     {
       "bullets": [
-        "Reading scifi/fantasy",
-        "Developing videogame mods"
+        "Reading sci-fi/fantasy",
+        "Developing mods for games"
       ],
       "title": "Activities/Hobbies"
     }
