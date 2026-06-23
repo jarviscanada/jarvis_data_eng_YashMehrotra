@@ -39,10 +39,10 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Developed a Cluster Monitoring Agent that allows the Linux administrator to track hardware information and resource usage across multiple nodes in a cluster using Bash scripting, PostgreSQL, Docker and Crontab to automatically gather usage statistics."
+    description: "Developed a Linux Cluster Monitoring Agent using Bash scripting, PostgreSQL, Docker, and Crontab to automatically collect and store hardware specifications and real-time resource usage across multiple cluster nodes. Designed two core scripts, one to capture static host information at provisioning time and another to record dynamic CPU and memory usage on a scheduled interval, with all data persisted to a PostgreSQL instance running in a Docker container. Enabled Linux administrators to query historical usage data for capacity planning and failure detection across distributed node environments."
   - name: "Online Sales Dataset Analysis and Restock Recommendation System"
     git_url: "/linux_sql"
-    description: "Perform Exploratory Data Analysis on an Online Sales Dataset, drawing out insights that inform business decisions. Trained a Machine Learning model to predict and recommend restocking quantity for future months."
+    description: "Analyzed a 50,000+ transaction Online Sales Dataset using Pandas to uncover insights around seasonal demand patterns, discount effectiveness, return behaviour, and customer segmentation via RFM scoring. Trained a Facebook Prophet time-series forecasting model to predict monthly product demand, with dynamic safety buffers derived from each product's historical demand volatility. Delivered a reusable Python inference function enabling the team to generate per-product restock recommendations for any target month on demand."
 
 # List of personal or academic projects
 # Feel free to add more projects
@@ -52,10 +52,10 @@ highlighted_projects:
     #URL is optional
     git_url: "https://github.com/Yooshley/ue_rag_assistant"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Built an AI Assistant that utilizes RAG pipeline with custom code chunking, sentence transformer embeddings, vector indexing, and LLM inference to answer questions from custom large C++ codebases using strict citation rules."
+    description: "Built a Source-Grounded Codebase Assistant using ChromaDB, Ollama, and a custom RAG pipeline to answer natural language questions about large C++ codebases with strict citation enforcement. Implemented a custom C++ code chunker using sentence transformer embeddings and vector indexing to enable semantically accurate retrieval across complex codebases, exposed via an MCP server interface. Designed the system to ground every response in retrieved source chunks, preventing hallucination and ensuring all answers are traceable back to the original codebase."
   - name: "Domain Intelligence Agent"
     git_url: "https://github.com/Yooshley/domain-intelligence-agent"
-    description: "Built a modular Agentic System for analyzing data across multiple domains like finance, research and policy using a shared core architecture of planning, retrieval analysis and reporting agents."
+    description: "Built a modular Agentic System using Python, FastAPI, and Streamlit to analyze financial data through a shared core architecture of specialized planning, retrieval, analysis, and reporting agents. Designed a domain-agnostic orchestration layer that routes queries through the appropriate pipeline, grounding outputs in real-time public financial data via Yahoo Finance. Delivered an interactive Streamlit interface for querying and reporting across the agent pipeline."
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
@@ -66,11 +66,11 @@ professional_experience:
     company: "Jarvis"
     duration: "2026-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Developed production-grade infrastructure tooling and data pipeline solutions across Linux, PostgreSQL, and Docker environments using Bash scripting and Agile practices."
+    description: "Developed production-grade infrastructure tooling and data pipeline solutions across Linux, PostgreSQL, and Docker environments using Bash scripting, Python, and Agile development practices. Delivered projects spanning cluster monitoring agents, relational database design, containerized application deployment, and exploratory data analysis on retail datasets. Collaborated within a structured training program simulating enterprise software delivery, applying version control via Git and maintaining project documentation to professional standards."
   - title: "Game Developer"
     company: "Hashbyte Studio"
     duration: "2021-2023"
-    description: "Built and shipped multi-platform, multiplayer, commercial titles owning systems development, performance optimization, and platform support."
+    description: "Developed and shipped commercial multi-platform multiplayer titles using Unity and C#, owning end-to-end systems development across networking, gameplay, and platform integration. Implemented real-time multiplayer functionality using Photon networking and PlayFab backend services, UI architecture, and cross-platform build pipelines. Optimized application performance across target platforms and managed full release cycles from development through store submission and post-launch support."
 
 #List of edcuation
 education:
