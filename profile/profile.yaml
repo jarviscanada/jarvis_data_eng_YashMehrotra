@@ -1,0 +1,96 @@
+# Preferred name (Characters only)
+name: "Yash Mehrotra"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_YashMehrotra
+
+# Introduce yourself, your academic and professional background.
+# What excites you about the software industry and your passion. At least 80 words
+summary: ML engineer with a diploma in Artificial Intelligence with Machine Learning (Humber College, 2025) and 4+ years of professional software engineering experience. Built LLM-powered applications, RAG pipelines, and agentic workflows by integrating LLM APIs, designing retrieval architectures, and building evaluation frameworks for generative AI outputs. Comfortable working across technical and non-technical teams, communicating AI concepts clearly, and delivering practical solutions to real problems.
+
+
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+  # At least 5 skills
+  proficient:
+    - Python
+    - Linux/Bash
+    - RDBMS/SQL
+    - Agile/Scrum
+    - Git
+  # At least 5 skills
+  competent:
+    - RAG (Retrieval Augmented Generation)
+    - MCP (Model Context Protocol)
+    - Pytorch/Tensorflow/Scikit-learn
+    - LLM APIs
+    - Langchain
+  # At least 5 skills
+  familiar:
+    - Spark
+    - Docker
+    - Sagemaker
+    - Databricks
+    - Hadoop
+
+# List of Jarvis projects
+jarvis_projects:
+  - name: "Cluster Monitor"
+    git_url: "/linux_sql"
+    # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Developed a Linux Cluster Monitoring Agent using Bash scripting, PostgreSQL, Docker, and Crontab to automatically collect and store hardware specifications and real-time resource usage across multiple cluster nodes. Designed two core scripts, one to capture static host information at provisioning time and another to record dynamic CPU and memory usage on a scheduled interval, with all data persisted to a PostgreSQL instance running in a Docker container. Enabled Linux administrators to query historical usage data for capacity planning and failure detection across distributed node environments."
+  - name: "Online Sales Dataset Analysis and Restock Recommendation System"
+    git_url: "/linux_sql"
+    description: "Analyzed a 50,000+ transaction Online Sales Dataset using Pandas to uncover insights around seasonal demand patterns, discount effectiveness, return behaviour, and customer segmentation via RFM scoring. Trained a Facebook Prophet time-series forecasting model to predict monthly product demand, with dynamic safety buffers derived from each product's historical demand volatility. Delivered a reusable Python inference function enabling the team to generate per-product restock recommendations for any target month on demand."
+
+# List of personal or academic projects
+# Feel free to add more projects
+highlighted_projects:
+  #project name
+  - name: "Codebase RAG Assistant"
+    #URL is optional
+    git_url: "https://github.com/Yooshley/ue_rag_assistant"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Built a Source-Grounded Codebase Assistant using ChromaDB, Ollama, and a custom RAG pipeline to answer natural language questions about large C++ codebases with strict citation enforcement. Implemented a custom C++ code chunker using sentence transformer embeddings and vector indexing to enable semantically accurate retrieval across complex codebases, exposed via an MCP server interface. Designed the system to ground every response in retrieved source chunks, preventing hallucination and ensuring all answers are traceable back to the original codebase."
+  - name: "Domain Intelligence Agent"
+    git_url: "https://github.com/Yooshley/domain-intelligence-agent"
+    description: "Built a modular Agentic System using Python, FastAPI, and Streamlit to analyze financial data through a shared core architecture of specialized planning, retrieval, analysis, and reporting agents. Designed a domain-agnostic orchestration layer that routes queries through the appropriate pipeline, grounding outputs in real-time public financial data via Yahoo Finance. Delivered an interactive Streamlit interface for querying and reporting across the agent pipeline."
+
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
+professional_experience:
+  #Write your Jarvis role as a professional experience rather than training.
+  - title: "ML Engineer"
+    company: "Jarvis"
+    duration: "2026-present"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Developed production-grade infrastructure tooling and data pipeline solutions across Linux, PostgreSQL, and Docker environments using Bash scripting, Python, and Agile development practices. Delivered projects spanning cluster monitoring agents, relational database design, containerized application deployment, and exploratory data analysis on retail datasets. Collaborated within a structured training program simulating enterprise software delivery, applying version control via Git and maintaining project documentation to professional standards."
+  - title: "Game Developer"
+    company: "Hashbyte Studio"
+    duration: "2021-2023"
+    description: "Developed and shipped commercial multi-platform multiplayer titles using Unity and C#, owning end-to-end systems development across networking, gameplay, and platform integration. Implemented real-time multiplayer functionality using Photon networking and PlayFab backend services, UI architecture, and cross-platform build pipelines. Optimized application performance across target platforms and managed full release cycles from development through store submission and post-launch support."
+
+#List of edcuation
+education:
+  - school_name: "Humber College"
+    duration: "2025"
+    degree: "Diploma"
+    department: "Artificial Intelligence with Machine Learning"
+    # optional
+    awards_achievements:
+      - "GPA: 84.97/100.00"
+  - school_name: "Jaypee University of Information Technology"
+    duration: "2017-2021"
+    degree: "Bachelor of Technology"
+    department: "Computer Science & Engineering"
+    awards_achievements:
+
+#Optional section
+others:
+  #category
+  - title: "Activities/Hobbies"
+    bullets:
+      - "Reading sci-fi/fantasy"
+      - "Developing mods for games"
