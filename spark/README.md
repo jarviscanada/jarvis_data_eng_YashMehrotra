@@ -47,9 +47,9 @@ The pipeline integrates Azure services with Databricks to ingest, transform, and
 
 The ingestion workflow consists of:
 
-- **Azure SQL Database**  Transaction and card data are loaded into Azure SQL Database and ingested into Databricks using JDBC and Lakeflow Connect.
-- **Azure Data Lake Storage (ADLS)**  User data is uploaded to Azure Storage and accessed through Unity Catalog External Locations.
-- **Azure Data Factory (ADF)**  Merchant category codes and fraud labels stored in Azure Blob Storage are copied into Databricks using Azure Data Factory.
+- **Azure SQL Database** : Transaction and card data are loaded into Azure SQL Database and ingested into Databricks using JDBC and Lakeflow Connect.
+- **Azure Data Lake Storage (ADLS)** : User data is uploaded to Azure Storage and accessed through Unity Catalog External Locations.
+- **Azure Data Factory (ADF)** : Merchant category codes and fraud labels stored in Azure Blob Storage are copied into Databricks using Azure Data Factory.
 
 After ingestion, the datasets are processed through the Medallion Architecture before being orchestrated using Databricks Workflows.
 
