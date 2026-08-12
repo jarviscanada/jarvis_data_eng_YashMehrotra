@@ -1,0 +1,9 @@
+{
+  "selected_model": "Gradient Boost",
+  "best_score": 0.7616190962930277,
+  "best_parameters": {
+    "model__max_iter": 200,
+    "model__max_depth": 9,
+    "model__learning_rate": 0.05
+  }
+}
