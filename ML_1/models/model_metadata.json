@@ -1,0 +1,33 @@
+{
+  "selected_model": "Gradient Boost",
+  "best_parameters": {
+    "model__max_iter": 200,
+    "model__max_depth": 9,
+    "model__learning_rate": 0.05
+  },
+  "decision_threshold": 0.6884737305364081,
+  "holdout_metrics": {
+    "AUROC": 0.7685482483650367,
+    "Gini": 0.5370964967300733,
+    "KS": 0.3993624692597733,
+    "AUPRC": 0.2609101361840731,
+    "F1": 0.3179110567115463,
+    "Brier": 0.18764714827142287,
+    "threshold": 0.6884737305364081
+  },
+  "training_rows": 246008,
+  "holdout_rows": 61503,
+  "input_feature_count": 190,
+  "customer_segment_used": false,
+  "random_state": 42,
+  "model_drop_features": [
+    "CODE_GENDER",
+    "CUSTOMER_SEGMENT",
+    "CUSTOMER_SEGMENT_NAME",
+    "NAME_EDUCATION_TYPE",
+    "NAME_FAMILY_STATUS",
+    "ORGANIZATION_TYPE"
+  ],
+  "cv_AUROC_mean": 0.7640053590394007,
+  "cv_AUROC_std": 0.0010614696851431401
+}

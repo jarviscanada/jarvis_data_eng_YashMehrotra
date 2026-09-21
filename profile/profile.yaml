@@ -43,6 +43,12 @@ jarvis_projects:
   - name: "Online Sales Dataset Analysis and Restock Recommendation System"
     git_url: "/linux_sql"
     description: "Analyzed a 50,000+ transaction Online Sales Dataset using Pandas to uncover insights around seasonal demand patterns, discount effectiveness, return behaviour, and customer segmentation via RFM scoring. Trained a Facebook Prophet time-series forecasting model to predict monthly product demand, with dynamic safety buffers derived from each product's historical demand volatility. Delivered a reusable Python inference function enabling the team to generate per-product restock recommendations for any target month on demand."
+  - name: "Databricks Data Pipeline"
+    git_url: "/spark"
+    description: "Developed scalable ETL and analytics pipelines using PySpark, Apache Spark, Databricks, and Delta Lake to ingest and transform data from CSV, Parquet, Azure SQL, cloud storage, and external APIs. Implemented a Medallion Architecture with Bronze, Silver, and Gold layers for raw ingestion, data cleansing, validation, enrichment, joins, and business-ready aggregations. Integrated Azure services including ADLS, Azure Data Factory, JDBC, Lakeflow Connect, and Unity Catalog, and built Delta Live Tables pipelines and interactive Databricks dashboards for fraud and stock-market analytics."
+  - name: "Home Credit Default Risk Prediction"
+    git_url: "/ml_1"
+    description: "Conducted exploratory data analysis and feature engineering on more than 300,000 Home Credit loan applications using Pandas, Matplotlib, and Seaborn to identify patterns associated with applicant demographics, income, employment, credit exposure, and default risk. Built and compared Logistic Regression, Random Forest, and Gradient Boosting classification pipelines using Scikit-learn, with preprocessing and hyperparameter optimization performed through cross-validation and RandomizedSearchCV. Evaluated performance using AUROC, Gini, KS, AUPRC, F1, and calibration metrics, achieving an AUROC of approximately 0.76 and producing an explainable credit-risk pipeline for scoring new applicants."
 
 # List of personal or academic projects
 # Feel free to add more projects
@@ -66,7 +72,7 @@ professional_experience:
     company: "Jarvis"
     duration: "2026-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Developed production-grade infrastructure tooling and data pipeline solutions across Linux, PostgreSQL, and Docker environments using Bash scripting, Python, and Agile development practices. Delivered projects spanning cluster monitoring agents, relational database design, containerized application deployment, and exploratory data analysis on retail datasets. Collaborated within a structured training program simulating enterprise software delivery, applying version control via Git and maintaining project documentation to professional standards."
+    description: "Built end-to-end data engineering and machine learning solutions using Python, PySpark, Databricks, PostgreSQL, Docker, Bash, and Scikit-learn. Developed a Linux cluster monitoring system for automated infrastructure telemetry, analyzed retail transaction data and built Prophet-based demand forecasting and restock recommendation workflows, implemented Medallion Architecture ETL pipelines across Azure and Databricks with Delta Lake and Delta Live Tables, and trained classification models for credit default prediction using feature engineering, hyperparameter tuning, and SHAP explainability. Applied Git-based version control, modular development practices, and technical documentation throughout an enterprise-style Agile development environment."
   - title: "Game Developer"
     company: "Hashbyte Studio"
     duration: "2021-2023"
@@ -92,5 +98,5 @@ others:
   #category
   - title: "Activities/Hobbies"
     bullets:
-      - "Reading sci-fi/fantasy"
-      - "Developing mods for games"
+      - "Reading sci-fi/fantasy books"
+      - "Developing mods for videogames"

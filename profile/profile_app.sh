@@ -26,28 +26,28 @@ function validate_yaml() {
   echo "---- Validating profile.yaml file ----"
   docker pull jrvs/yamale
   docker pull mikefarah/yq:3.3.4
-  docker run --rm -v "${PWD}":/workdir jrvs/yamale yamale -s /schema/profile_schema.yaml profile.yaml
+  MSYS_NO_PATHCONV=1 docker run --rm -v "${PWD}":/workdir jrvs/yamale yamale -s /schema/profile_schema.yaml profile.yaml
   check_status $?
 }
 
 function get_profile_name() {
-  echo "---- Parsing metadat ----"
-  profile_name=$(docker run -it --rm -v "${PWD}":/workdir mikefarah/yq:3.3.4 yq r profile.yaml name  | xargs | tr -d '\r' | sed -e 's/ /_/g')
+  echo "---- Parsing metadata ----"
+  profile_name=$(MSYS_NO_PATHCONV=1 docker run --rm -v "${PWD}":/workdir mikefarah/yq:3.3.4 yq r profile.yaml name | xargs | tr -d '\r' | sed -e 's/ /_/g') exit_code=$?
+  check_status ${exit_code}
   profile_prefix=jarvis_profile_${profile_name}
-  echo ${profile_name}
-  check_status $?
+  echo "${profile_name}"
 }
 
 function yaml_to_json() {
   echo "---- Coverting profile YAML to JSON ----"
-  docker run --rm -v "${PWD}":/workdir mikefarah/yq:3.3.4 yq r -j --prettyPrint profile.yaml > profile.json
+  MSYS_NO_PATHCONV=1 docker run --rm -v "${PWD}":/workdir mikefarah/yq:3.3.4 yq r -j --prettyPrint profile.yaml > profile.json
   check_status $?
 }
 
 function render_md() {
   echo "---- Rendering profile.md ----"
   docker pull jrvs/render_profile_md
-  docker run --rm -it -v "${PWD}":/workdir jrvs/render_profile_md  profile.yaml profile.md
+  MSYS_NO_PATHCONV=1 docker run --rm -v "${PWD}":/workdir jrvs/render_profile_md profile.yaml profile.md
   check_status $?
 }
 
@@ -60,7 +60,7 @@ function render_pdf() {
   left_right_margin=1.5cm
   font_size=8
 
-  docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) pandoc/latex:2.9.2.1 \
+  MSYS_NO_PATHCONV=1 docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) pandoc/latex:2.9.2.1 \
     ${template_profile} -f markdown -t pdf -s \
     --pdf-engine=xelatex -V pagestyle=empty -V fontsize=${font_size}pt -V geometry:"top=${top_bot_margin}, bottom=${top_bot_margin}, left=${left_right_margin}, right=${left_right_margin}" -o ${output_profile_pdf}
   check_status $?

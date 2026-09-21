@@ -1,0 +1,76 @@
+{
+  "application_features": [
+    "AGE_YEARS",
+    "EMPLOYMENT_YEARS",
+    "CREDIT_INCOME_RATIO",
+    "ANNUITY_INCOME_RATIO",
+    "CREDIT_TERM_PROXY",
+    "EMPLOYMENT_AGE_RATIO",
+    "INCOME_PER_PERSON",
+    "CREDIT_GOODS_RATIO",
+    "EXT_SOURCE_MEAN",
+    "EXT_SOURCE_STD",
+    "EXT_SOURCE_MIN",
+    "EXT_SOURCE_MAX",
+    "EXT_SOURCE_MISSING_COUNT",
+    "AGE_BUCKET",
+    "DOCUMENT_COUNT",
+    "CONTACTABILITY_SCORE"
+  ],
+  "bureau_features": [
+    "BUREAU_RECORD_COUNT",
+    "BUREAU_ACTIVE_COUNT",
+    "BUREAU_CLOSED_COUNT",
+    "BUREAU_OVERDUE_RECORD_COUNT",
+    "BUREAU_DAYS_CREDIT_MEAN",
+    "BUREAU_DAYS_CREDIT_MIN",
+    "BUREAU_CREDIT_SUM_MEAN",
+    "BUREAU_CREDIT_SUM_TOTAL",
+    "BUREAU_DEBT_TOTAL",
+    "BUREAU_OVERDUE_MAX",
+    "BUREAU_DAYS_OVERDUE_MAX",
+    "BUREAU_PROLONG_COUNT",
+    "BUREAU_ACTIVE_RATIO",
+    "BUREAU_DEBT_CREDIT_RATIO",
+    "BUREAU_HISTORY_MISSING"
+  ],
+  "ordinal_features": [
+    "EDUCATION_ORDINAL"
+  ],
+  "clustering_feature": "CUSTOMER_SEGMENT",
+  "clustering_label": "CUSTOMER_SEGMENT_NAME",
+  "high_cardinality_categoricals": [
+    "ORGANIZATION_TYPE"
+  ],
+  "low_cardinality_categoricals": [
+    "OCCUPATION_TYPE",
+    "WALLSMATERIAL_MODE",
+    "NAME_TYPE_SUITE",
+    "NAME_INCOME_TYPE",
+    "WEEKDAY_APPR_PROCESS_START",
+    "NAME_FAMILY_STATUS",
+    "NAME_HOUSING_TYPE",
+    "FONDKAPREMONT_MODE",
+    "NAME_EDUCATION_TYPE",
+    "AGE_BUCKET",
+    "HOUSETYPE_MODE",
+    "CODE_GENDER",
+    "EMERGENCYSTATE_MODE",
+    "NAME_CONTRACT_TYPE",
+    "FLAG_OWN_CAR",
+    "FLAG_OWN_REALTY"
+  ],
+  "model_drop_features": [
+    "CODE_GENDER",
+    "NAME_EDUCATION_TYPE",
+    "NAME_FAMILY_STATUS",
+    "ORGANIZATION_TYPE",
+    "CUSTOMER_SEGMENT_NAME"
+  ],
+  "governance_excluded_features": [
+    "CODE_GENDER",
+    "NAME_FAMILY_STATUS"
+  ],
+  "dropped_duplicate_feature": "ANNUITY_CREDIT_RATIO",
+  "leakage_note": "All supervised predictors use application-time information; clustering transforms are fitted on training rows only and TARGET is used only for post-hoc segment profiling."
+}
