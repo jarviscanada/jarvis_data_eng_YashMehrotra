@@ -48,7 +48,10 @@ jarvis_projects:
     description: "Developed scalable ETL and analytics pipelines using PySpark, Apache Spark, Databricks, and Delta Lake to ingest and transform data from CSV, Parquet, Azure SQL, cloud storage, and external APIs. Implemented a Medallion Architecture with Bronze, Silver, and Gold layers for raw ingestion, data cleansing, validation, enrichment, joins, and business-ready aggregations. Integrated Azure services including ADLS, Azure Data Factory, JDBC, Lakeflow Connect, and Unity Catalog, and built Delta Live Tables pipelines and interactive Databricks dashboards for fraud and stock-market analytics."
   - name: "Home Credit Default Risk Prediction"
     git_url: "/ml_1"
-    description: "Conducted exploratory data analysis and feature engineering on more than 300,000 Home Credit loan applications using Pandas, Matplotlib, and Seaborn to identify patterns associated with applicant demographics, income, employment, credit exposure, and default risk. Built and compared Logistic Regression, Random Forest, and Gradient Boosting classification pipelines using Scikit-learn, with preprocessing and hyperparameter optimization performed through cross-validation and RandomizedSearchCV. Evaluated performance using AUROC, Gini, KS, AUPRC, F1, and calibration metrics, achieving an AUROC of approximately 0.76 and producing an explainable credit-risk pipeline for scoring new applicants."
+    description: "Developed an end-to-end credit risk ML pipeline in Databricks using 300,000+ Home Credit loan applications, implementing a Bronze–Silver–Gold medallion architecture for ingestion, preprocessing, feature engineering, and model-ready datasets with Spark and Pandas. Built and optimized Logistic Regression, Random Forest, and Gradient Boosting models using Scikit-learn and cross-validation, achieving ~0.76 AUROC and evaluating performance across Gini, KS, AUPRC, F1, and calibration metrics. Created Databricks EDA and model-monitoring dashboards and a Streamlit application for real-time applicant scoring and explainability, enabling a scalable workflow for credit-risk assessment."
+  - name: "Stock Market Deep Learning System"
+    git_url: "/ml_2"
+    description: "Pending."
 
 # List of personal or academic projects
 # Feel free to add more projects
