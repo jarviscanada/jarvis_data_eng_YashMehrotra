@@ -97,6 +97,17 @@ def performance_metrics(
     }
 
 
+def execution_metrics(asset_rows: pd.DataFrame) -> dict[str, float]:
+    """Summarize activity and hit rate from asset-level backtest rows."""
+
+    active = asset_rows.loc[asset_rows["position"] > 0, "net_return"]
+    return {
+        "trades": int(asset_rows["trade"].sum()),
+        "average_daily_turnover": float(asset_rows.groupby("Date")["trade"].mean().mean()),
+        "active_win_rate": float((active > 0).mean()) if len(active) else np.nan,
+    }
+
+
 def monthly_returns(daily: pd.DataFrame, *, date_col: str = "Date") -> pd.Series:
     """Compound daily log returns into calendar-month simple returns."""
 

@@ -5,13 +5,9 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-import matplotlib
-
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle
 import numpy as np
 import pandas as pd
+from PIL import Image, ImageDraw
 
 
 def render_candlestick_window(
@@ -27,38 +23,33 @@ def render_candlestick_window(
     if missing:
         raise ValueError(f"Missing OHLC columns: {sorted(missing)}")
 
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    figure = plt.figure(figsize=(image_size / 100, image_size / 100), dpi=100)
-    axis = figure.add_axes([0, 0, 1, 1])
-
     opens = window["Open"].to_numpy(float)
     highs = window["High"].to_numpy(float)
     lows = window["Low"].to_numpy(float)
     closes = window["Close"].to_numpy(float)
-    x = np.arange(len(window))
-    price_range = max(highs.max() - lows.min(), 1e-6)
+    price_low = lows.min()
+    price_range = max(highs.max() - price_low, 1e-6)
+
+    image = Image.new("RGB", (image_size, image_size), "white")
+    draw = ImageDraw.Draw(image)
+    margin = 4
+    x_step = (image_size - 2 * margin) / len(window)
+
+    def y_coordinate(price: float) -> int:
+        normalized = (price - price_low) / price_range
+        return round(image_size - margin - normalized * (image_size - 2 * margin))
 
     for index in range(len(window)):
         color = "#15803d" if closes[index] >= opens[index] else "#b91c1c"
-        axis.vlines(x[index], lows[index], highs[index], color=color, linewidth=1)
-        body_low = min(opens[index], closes[index])
-        body_height = max(abs(closes[index] - opens[index]), price_range * 0.002)
-        axis.add_patch(
-            Rectangle(
-                (x[index] - 0.3, body_low),
-                0.6,
-                body_height,
-                facecolor=color,
-                edgecolor=color,
-                linewidth=0.7,
-            )
-        )
+        x = round(margin + (index + 0.5) * x_step)
+        draw.line((x, y_coordinate(highs[index]), x, y_coordinate(lows[index])), fill=color, width=1)
+        top = min(y_coordinate(opens[index]), y_coordinate(closes[index]))
+        bottom = max(y_coordinate(opens[index]), y_coordinate(closes[index]), top + 1)
+        half_width = max(1, round(x_step * 0.3))
+        draw.rectangle((x - half_width, top, x + half_width, bottom), fill=color, outline=color)
 
-    axis.set_xlim(-1, len(window))
-    axis.set_ylim(lows.min() - 0.05 * price_range, highs.max() + 0.05 * price_range)
-    axis.axis("off")
-    figure.savefig(output_path, dpi=100, pad_inches=0)
-    plt.close(figure)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    image.save(output_path, format="PNG", optimize=False)
 
 
 def generate_images(
@@ -68,7 +59,7 @@ def generate_images(
     tickers: list[str],
     window_size: int = 30,
     horizon: int = 5,
-    stride: int = 20,
+    stride: int = 1,
 ) -> pd.DataFrame:
     """Generate images and return their dates, labels, and future returns."""
 
@@ -82,11 +73,10 @@ def generate_images(
             prediction_date = stock.loc[end, "Date"]
             future_return = np.log(stock.loc[end + horizon, "Close"] / stock.loc[end, "Close"])
             image_path = output_dir / ticker / f"{prediction_date:%Y%m%d}.png"
-            if not image_path.exists():
-                render_candlestick_window(
-                    stock.iloc[end - window_size + 1 : end + 1],
-                    image_path,
-                )
+            render_candlestick_window(
+                stock.iloc[end - window_size + 1 : end + 1],
+                image_path,
+            )
             records.append(
                 {
                     "Ticker": ticker,
@@ -105,7 +95,7 @@ def main() -> None:
     parser.add_argument("--data", type=Path, default=Path("data/sp500_stocks.csv"))
     parser.add_argument("--output", type=Path, default=Path("data/chart_images_demo"))
     parser.add_argument("--tickers", nargs="+", default=["AAPL", "MSFT"])
-    parser.add_argument("--stride", type=int, default=20)
+    parser.add_argument("--stride", type=int, default=1)
     args = parser.parse_args()
 
     labels = generate_images(
