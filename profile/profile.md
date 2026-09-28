@@ -1,0 +1,53 @@
+# Yash Mehrotra . Jarvis Consulting
+
+ML engineer with a graduate certificate in Artificial Intelligence with Machine Learning (Humber College, 2025) and 4+ years of professional software engineering experience. Built LLM-powered applications, RAG pipelines, and agentic workflows by integrating LLM APIs, designing retrieval architectures, and building evaluation frameworks for generative AI outputs. Comfortable working across technical and non-technical teams, communicating AI concepts clearly, and delivering practical solutions to real problems.
+
+## Skills
+
+**Proficient:** Python, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git
+
+**Competent:** RAG (Retrieval Augmented Generation), Pytorch/Tensorflow/Scikit-learn, LLM APIs, Langchain, Docker, Databricks
+
+**Familiar:** Spark, Lambda, Sagemaker, Hadoop, MCP (Model Context Protocol)
+
+## Jarvis Projects
+
+Project source code: [https://github.com/jarviscanada/jarvis_data_eng_YashMehrotra](https://github.com/jarviscanada/jarvis_data_eng_YashMehrotra)
+
+
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_YashMehrotra/tree/master/linux_sql)]: Developed a Linux Cluster Monitoring Agent using Bash scripting, PostgreSQL, Docker, and Crontab to automatically collect and store hardware specifications and real-time resource usage across multiple cluster nodes. Designed two core scripts, one to capture static host information at provisioning time and another to record dynamic CPU and memory usage on a scheduled interval, with all data persisted to a PostgreSQL instance running in a Docker container. Enabled Linux administrators to query historical usage data for capacity planning and failure detection across distributed node environments.
+
+**Online Sales Dataset Analysis and Restock Recommendation System** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_YashMehrotra/tree/master/linux_sql)]: Analyzed a 50,000+ transaction Online Sales Dataset using Pandas to uncover insights around seasonal demand patterns, discount effectiveness, return behaviour, and customer segmentation via RFM scoring. Trained a Facebook Prophet time-series forecasting model to predict monthly product demand, with dynamic safety buffers derived from each product's historical demand volatility. Delivered a reusable Python inference function enabling the team to generate per-product restock recommendations for any target month on demand.
+
+**Databricks Data Pipeline** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_YashMehrotra/tree/master/spark)]: Developed scalable ETL and analytics pipelines using PySpark, Apache Spark, Databricks, and Delta Lake to ingest and transform data from CSV, Parquet, Azure SQL, cloud storage, and external APIs. Implemented a Medallion Architecture with Bronze, Silver, and Gold layers for raw ingestion, data cleansing, validation, enrichment, joins, and business-ready aggregations. Integrated Azure services including ADLS, Azure Data Factory, JDBC, Lakeflow Connect, and Unity Catalog, and built Delta Live Tables pipelines and interactive Databricks dashboards for fraud and stock-market analytics.
+
+**Home Credit Default Risk Prediction** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_YashMehrotra/tree/master/ml_1)]: Developed an end-to-end credit risk ML pipeline in Databricks using 300,000+ Home Credit loan applications, implementing a Bronze–Silver–Gold medallion architecture for ingestion, preprocessing, feature engineering, and model-ready datasets with Spark and Pandas. Built and optimized Logistic Regression, Random Forest, and Gradient Boosting models using Scikit-learn and cross-validation, achieving ~0.76 AUROC and evaluating performance across Gini, KS, AUPRC, F1, and calibration metrics. Created Databricks EDA and model-monitoring dashboards and a Streamlit application for real-time applicant scoring and explainability, enabling a scalable workflow for credit-risk assessment.
+
+**Stock Market Deep Learning System** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_YashMehrotra/tree/master/ml_2)]: Developed an end-to-end deep learning and backtesting pipeline for US equity return forecasting across 50 stocks from 2005–2025. Built and compared feedforward neural networks, LSTM sequence models, linear regression, and ResNet-18 chart-image models using PyTorch, Scikit-learn, Pandas, and time-series walk-forward validation with strict leakage controls. Engineered technical and market features including returns, implemented reproducible chronological preprocessing, scaling, checkpointing, and inference workflows. Evaluated models using Sharpe ratio, drawdown, turnover, and transaction-cost-adjusted portfolio performance, with the selected feedforward model achieving 52.08% directional accuracy and a 1.17 net Sharpe ratio. Built a realistic backtesting framework with SPY and equal-weight benchmarks, cost sensitivity analysis, and monitoring.
+
+
+## Highlighted Projects
+**Codebase RAG Assistant** [[GitHub](https://github.com/Yooshley/ue_rag_assistant)]: Built a Source-Grounded Codebase Assistant using ChromaDB, Ollama, and a custom RAG pipeline to answer natural language questions about large C++ codebases with strict citation enforcement. Implemented a custom C++ code chunker using sentence transformer embeddings and vector indexing to enable semantically accurate retrieval across complex codebases, exposed via an MCP server interface. Designed the system to ground every response in retrieved source chunks, preventing hallucination and ensuring all answers are traceable back to the original codebase.
+
+**Domain Intelligence Agent** [[GitHub](https://github.com/Yooshley/domain-intelligence-agent)]: Built a modular Agentic System using Python, FastAPI, and Streamlit to analyze financial data through a shared core architecture of specialized planning, retrieval, analysis, and reporting agents. Designed a domain-agnostic orchestration layer that routes queries through the appropriate pipeline, grounding outputs in real-time public financial data via Yahoo Finance. Delivered an interactive Streamlit interface for querying and reporting across the agent pipeline.
+
+
+## Professional Experiences
+
+**ML Engineer, Jarvis (2026-present)**: Built end-to-end data engineering and machine learning solutions using Python, PySpark, Databricks, PostgreSQL, Docker, Bash, and Scikit-learn. Developed a Linux cluster monitoring system for automated infrastructure telemetry, analyzed retail transaction data and built Prophet-based demand forecasting and restock recommendation workflows, implemented Medallion Architecture ETL pipelines across Azure and Databricks with Delta Lake and Delta Live Tables, and trained classification models for credit default prediction using feature engineering, hyperparameter tuning, and SHAP explainability. Applied Git-based version control, modular development practices, and technical documentation throughout an enterprise-style Agile development environment.
+
+**Game Developer, Hashbyte Studio (2021-2023)**: Developed and shipped commercial multi-platform multiplayer titles using Unity and C#, owning end-to-end systems development across networking, gameplay, and platform integration. Implemented real-time multiplayer functionality using Photon networking and PlayFab backend services, UI architecture, and cross-platform build pipelines. Optimized application performance across target platforms and managed full release cycles from development through store submission and post-launch support.
+
+
+## Education
+**Humber College (2025)**, Diploma, Artificial Intelligence with Machine Learning
+- GPA: 84.97/100.00
+
+**Jaypee University of Information Technology (2017-2021)**, Bachelor of Technology, Computer Science & Engineering
+
+
+## Miscellaneous
+- Databricks Certified Data Engineer Associate (2026)
+- Coursera|Stanford Machine Learning (2020)
+- Reading sci-fi/fantasy books
+- Writing videogame mods

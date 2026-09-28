@@ -47,17 +47,29 @@
       "name": "Databricks Data Pipeline"
     },
     {
-      "description": "Conducted exploratory data analysis and feature engineering on more than 300,000 Home Credit loan applications using Pandas, Matplotlib, and Seaborn to identify patterns associated with applicant demographics, income, employment, credit exposure, and default risk. Built and compared Logistic Regression, Random Forest, and Gradient Boosting classification pipelines using Scikit-learn, with preprocessing and hyperparameter optimization performed through cross-validation and RandomizedSearchCV. Evaluated performance using AUROC, Gini, KS, AUPRC, F1, and calibration metrics, achieving an AUROC of approximately 0.76 and producing an explainable credit-risk pipeline for scoring new applicants.",
+      "description": "Developed an end-to-end credit risk ML pipeline in Databricks using 300,000+ Home Credit loan applications, implementing a Bronze–Silver–Gold medallion architecture for ingestion, preprocessing, feature engineering, and model-ready datasets with Spark and Pandas. Built and optimized Logistic Regression, Random Forest, and Gradient Boosting models using Scikit-learn and cross-validation, achieving ~0.76 AUROC and evaluating performance across Gini, KS, AUPRC, F1, and calibration metrics. Created Databricks EDA and model-monitoring dashboards and a Streamlit application for real-time applicant scoring and explainability, enabling a scalable workflow for credit-risk assessment.",
       "git_url": "/ml_1",
       "name": "Home Credit Default Risk Prediction"
+    },
+    {
+      "description": "Developed an end-to-end deep learning and backtesting pipeline for US equity return forecasting across 50 stocks from 2005–2025. Built and compared feedforward neural networks, LSTM sequence models, linear regression, and ResNet-18 chart-image models using PyTorch, Scikit-learn, Pandas, and time-series walk-forward validation with strict leakage controls. Engineered technical and market features including returns, implemented reproducible chronological preprocessing, scaling, checkpointing, and inference workflows. Evaluated models using Sharpe ratio, drawdown, turnover, and transaction-cost-adjusted portfolio performance, with the selected feedforward model achieving 52.08% directional accuracy and a 1.17 net Sharpe ratio. Built a realistic backtesting framework with SPY and equal-weight benchmarks, cost sensitivity analysis, and monitoring.",
+      "git_url": "/ml_2",
+      "name": "Stock Market Deep Learning System"
     }
   ],
   "name": "Yash Mehrotra",
   "others": [
     {
       "bullets": [
+        "Databricks Certified Data Engineer Associate (2026)",
+        "Coursera|Stanford Machine Learning (2020)"
+      ],
+      "title": "Certificates"
+    },
+    {
+      "bullets": [
         "Reading sci-fi/fantasy books",
-        "Developing mods for videogames"
+        "Writing videogame mods"
       ],
       "title": "Activities/Hobbies"
     }
@@ -79,17 +91,18 @@
   "skills": {
     "competent": [
       "RAG (Retrieval Augmented Generation)",
-      "MCP (Model Context Protocol)",
       "Pytorch/Tensorflow/Scikit-learn",
       "LLM APIs",
-      "Langchain"
+      "Langchain",
+      "Docker",
+      "Databricks"
     ],
     "familiar": [
       "Spark",
-      "Docker",
+      "Lambda",
       "Sagemaker",
-      "Databricks",
-      "Hadoop"
+      "Hadoop",
+      "MCP (Model Context Protocol)"
     ],
     "proficient": [
       "Python",
@@ -99,5 +112,5 @@
       "Git"
     ]
   },
-  "summary": "ML engineer with a diploma in Artificial Intelligence with Machine Learning (Humber College, 2025) and 4+ years of professional software engineering experience. Built LLM-powered applications, RAG pipelines, and agentic workflows by integrating LLM APIs, designing retrieval architectures, and building evaluation frameworks for generative AI outputs. Comfortable working across technical and non-technical teams, communicating AI concepts clearly, and delivering practical solutions to real problems."
+  "summary": "ML engineer with a graduate certificate in Artificial Intelligence with Machine Learning (Humber College, 2025) and 4+ years of professional software engineering experience. Built LLM-powered applications, RAG pipelines, and agentic workflows by integrating LLM APIs, designing retrieval architectures, and building evaluation frameworks for generative AI outputs. Comfortable working across technical and non-technical teams, communicating AI concepts clearly, and delivering practical solutions to real problems."
 }
