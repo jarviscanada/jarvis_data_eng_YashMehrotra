@@ -1,0 +1,20 @@
+{
+  "model_name": "feedforward_nn_step3",
+  "task": "next_trading_day_log_return",
+  "decision_rule": "long if prediction > 0, otherwise cash",
+  "feature_count": 12,
+  "feature_artifact": "models/feature_cols.joblib",
+  "scaler_artifact": "models/feature_scaler.joblib",
+  "checkpoint": "models/feedforward_nn_step3.pt",
+  "transaction_cost_bps": 10.0,
+  "evaluation_start": "2022-12-08",
+  "evaluation_end": "2025-12-22",
+  "recommendation": "PAPER TRADE",
+  "limitations": [
+    "survivorship bias",
+    "market impact omitted",
+    "taxes omitted",
+    "latency omitted",
+    "regime change"
+  ]
+}
