@@ -87,7 +87,7 @@ ml_2/
 ├── tests/              # Business-pipeline tests
 ├── data/               # Raw and processed market data
 ├── models/             # Checkpoints, scaler, feature list, and manifest
-├── reports/generated/  # Results, monitoring plan, Q&A guide, and summary
+├── reports/generated/  # Results and summary
 ├── demos/              # Standalone workflow examples
 ├── requirements.txt
 └── README.md
@@ -97,11 +97,9 @@ Important outputs include:
 
 - `reports/generated/executive_summary.md`
 - `reports/generated/model_documentation.md`
-- `reports/generated/monitoring_plan.md`
 - `reports/generated/model_comparison.csv`
 - `reports/generated/portfolio_comparison.csv`
 - `reports/generated/cost_sensitivity.csv`
-- `reports/generated/Module2_DL_Project_QA_Guide.docx`
 
 ## Decision and Limitations
 
