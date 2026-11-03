@@ -1,0 +1,11 @@
+[
+  {
+    "seed": 42,
+    "validation_balanced_accuracy": 0.5117393772675511,
+    "threshold": 0.49,
+    "validation_long": 23169,
+    "validation_cash": 14931,
+    "probability_std": 0.03662285581231117,
+    "validation_loss": 0.8109227418899536
+  }
+]
