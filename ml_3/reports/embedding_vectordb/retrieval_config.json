@@ -1,5 +1,5 @@
 {
-  "chroma_path": "models/chroma",
+  "chroma_path": "c:\\Users\\ashym\\Documents\\GitHub\\jarvis_data_eng_YashMehrotra\\ml_3\\models\\chroma",
   "collections": {
     "local": "bank_filings_local",
     "openai": "bank_filings_openai"
