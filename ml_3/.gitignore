@@ -7,6 +7,8 @@
 !**/.env.example
 *.pem
 *.key
+.streamlit/secrets.toml
+**/.streamlit/secrets.toml
 
 # Python and notebook runtime files
 __pycache__/

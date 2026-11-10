@@ -4,6 +4,41 @@ Canadian bank filing ingestion and vector retrieval notebooks.
 
 ## Setup
 
+## Local conversation demo
+
+For remote presentation access, see [Community Cloud deployment](docs/community_cloud.md).
+The app supports Streamlit secrets and a checksum-verified portable index bundle.
+
+From the project root, run `python -m streamlit run app.py --server.address 127.0.0.1`.
+Open the localhost URL printed by Streamlit. The app uses the existing Chroma
+index and project `.env`; run notebooks 1 and 2 first if the index is missing.
+Install dependencies with `python -m pip install -r requirements.txt`.
+
+Start with BMO credit risk in 2025, follow with "its provision for credit losses",
+then "Compare TD with it". A named bank replaces the active bank; explicit years
+replace prior periods. A comparison pronoun excludes banks explicitly named in
+that question and resolves only if exactly one prior candidate remains. Multiple
+possible antecedents trigger clarification. Unknown banks never inherit a valid
+bank. This conservative rule-based resolver supports common English references;
+it is not a general natural-language coreference model.
+
+Evidence-only mode is on initially. Generation uses the existing API key and
+has an estimated US$2 ledger budget per browser session, excluding any embedding
+API usage not covered by reservations. Local MiniLM embeddings avoid those API
+charges. Evidence-only mode with local embeddings works without an API key.
+Choose structured MMR, basic retrieval or the tool-calling agent. Source
+passages, original filing links, resolved scope and public tool traces are
+available for inspection. Citation identity checks do not establish claim truth.
+Conversation state advances only after a successful request. On clarification,
+restate the full question including bank and year. Use New conversation to clear
+the discussion. Live answers use fresh filing retrieval; previous assistant
+answers are never treated as financial evidence.
+
+The app is a local extension; the historical evaluation scores do not evaluate
+its new conversation controls. Session logs stay under ignored `.local/demo`.
+
+## Notebook setup
+
 Use Python 3.11 and create a virtual environment at the project root:
 
 ```powershell

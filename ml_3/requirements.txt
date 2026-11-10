@@ -13,3 +13,4 @@ sentence-transformers>=3,<6
 tiktoken>=0.7,<1
 tqdm>=4,<5
 requests>=2.31,<3
+streamlit>=1.40,<2

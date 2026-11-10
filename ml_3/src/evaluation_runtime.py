@@ -51,7 +51,7 @@ class BudgetExceeded(RuntimeError):
 
 
 class Runtime:
-    def __init__(self, base, output, budget_usd=5.0):
+    def __init__(self, base, output, budget_usd=5.0, require_api_key=True):
         import chromadb
         import torch
         from dotenv import load_dotenv
@@ -61,7 +61,8 @@ class Runtime:
         self.output.mkdir(parents=True, exist_ok=True)
         for env in [self.base / '.env', self.base / 'notebooks' / '.env']:
             load_dotenv(env, override=False, encoding='utf-8-sig')
-        self.client = OpenAI(max_retries=2, timeout=90)
+        self.client = (OpenAI(max_retries=2, timeout=90)
+                       if require_api_key or __import__('os').getenv('OPENAI_API_KEY') else None)
         self.model = 'gpt-4o-mini'
         self.budget = budget_usd
         self.lock, self.embed_lock = threading.RLock(), threading.Lock()
@@ -125,6 +126,8 @@ class Runtime:
                 file.write(json.dumps(event, ensure_ascii=False) + '\n')
 
     def chat(self, **kwargs):
+        if self.client is None:
+            raise RuntimeError('Set OPENAI_API_KEY in the project .env to generate answers.')
         import tiktoken
         if kwargs.get('model', self.model) not in PRICES:
             raise ValueError('Configure explicit token prices for a different model before evaluation')
@@ -228,7 +231,7 @@ class Runtime:
     def rag(self, question, structured=False):
         started = time.perf_counter()
         strategy = 'mmr' if structured else 'top_k'
-        hits = self.retrieve_scopes(question['question'], question['scopes'], strategy, total=8)
+        hits = self.retrieve_scopes(question.get('retrieval_query', question['question']), question['scopes'], strategy, total=8)
         retrieval_seconds = time.perf_counter()-started
         if not hits:
             return {'answer': 'The provided filings do not contain enough information to answer this question.',

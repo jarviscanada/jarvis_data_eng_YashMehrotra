@@ -1,12 +1,10 @@
 {
-  "chroma_path": "c:\\Users\\ashym\\Documents\\GitHub\\jarvis_data_eng_YashMehrotra\\ml_3\\models\\chroma",
+  "chroma_path": "C:\\Users\\ashym\\Documents\\GitHub\\jarvis_data_eng_YashMehrotra\\ml_3\\models\\chroma",
   "collections": {
-    "local": "bank_filings_local",
-    "openai": "bank_filings_openai"
+    "local": "bank_filings_local"
   },
   "models": {
-    "local": "sentence-transformers/all-MiniLM-L6-v2",
-    "openai": "text-embedding-3-small"
+    "local": "sentence-transformers/all-MiniLM-L6-v2"
   },
   "default_provider": "local",
   "top_k": 5,
